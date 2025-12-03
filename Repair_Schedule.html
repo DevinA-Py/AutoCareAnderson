@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+   <!--
+      Vehicle Repair Shop Website
+      Schedule Service Page
+      Author: Devin Anderson
+      Date:
+   -->
+   <meta charset="utf-8">
+   <title>Anderson Auto Care - Schedule Service</title>
+   <link rel="stylesheet" href="Repair_Style.css">
+</head>
+<body>
+   <header>
+      <div class="logo-title">
+         <img src="Auto Care.png" alt="Anderson Auto Care logo" class="logo">
+         <div>
+            <h1>Anderson Auto Care</h1>
+            <p class="tagline">Schedule Your Next Service Appointment</p>
+         </div>
+      </div>
+
+      <nav>
+         <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Repair_Services.html">Services</a></li>
+            <li><a href="Repair_About.html">Our Team</a></li>
+            <li><a href="Repair_Schedule.html">Schedule Service</a></li>
+            <li><a href="https://www.firestonecompleteautocare.com/blog/maintenance/" target="_blank">Car Care Tips</a></li>
+         </ul>
+      </nav>
+   </header>
+
+   <main>
+      <section>
+         <h2>Request an Appointment</h2>
+         <p>
+            Fill out the form below to request a service appointment. We’ll review your
+            request and contact you to confirm the exact time and details.
+         </p>
+      </section>
+
+      <section>
+         <form id="serviceForm">
+            <fieldset>
+               <legend>Contact Information</legend>
+
+               <label for="firstName">First Name<span aria-hidden="true">*</span></label>
+               <input type="text" id="firstName" name="firstName" required>
+
+               <label for="lastName">Last Name</label>
+               <input type="text" id="lastName" name="lastName">
+
+               <label for="email">Email<span aria-hidden="true">*</span></label>
+               <input type="email" id="email" name="email" required>
+
+               <label for="phone">Phone<span aria-hidden="true">*</span></label>
+               <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+
+            <fieldset>
+               <legend>Vehicle Information</legend>
+
+               <label for="vehicleYear">Vehicle Year</label>
+               <input type="number" id="vehicleYear" name="vehicleYear" min="1980" max="2050">
+
+               <label for="vehicleMakeModel">Make &amp; Model<span aria-hidden="true">*</span></label>
+               <input type="text" id="vehicleMakeModel" name="vehicleMakeModel" required>
+            </fieldset>
+
+            <fieldset>
+               <legend>Service Details</legend>
+
+               <label for="serviceType">Service Type<span aria-hidden="true">*</span></label>
+               <select id="serviceType" name="serviceType" required>
+                  <option value="">-- Please select --</option>
+                  <option value="oil-change">Oil Change</option>
+                  <option value="brakes">Brake Inspection / Repair</option>
+                  <option value="tires">Tire Rotation / Alignment</option>
+                  <option value="diagnostics">Engine Diagnostics</option>
+                  <option value="battery">Battery Service</option>
+                  <option value="ac">AC System Service</option>
+                  <option value="other">Other (describe below)</option>
+               </select>
+
+               <label for="preferredDate">Preferred Date<span aria-hidden="true">*</span></label>
+               <input type="date" id="preferredDate" name="preferredDate" required>
+
+               <label for="preferredTime">Preferred Time</label>
+               <input type="time" id="preferredTime" name="preferredTime">
+
+               <label for="notes">Additional Notes</label>
+               <textarea id="notes" name="notes" rows="4"
+                         placeholder="Describe any issues, noises, or warning lights."></textarea>
+            </fieldset>
+
+            <p class="small-note">
+               <em>Fields marked with * are required.</em>
+            </p>
+
+            <button type="submit" class="btn">Submit Request</button>
+         </form>
+      </section>
+   </main>
+
+   <footer>
+      <p>&copy; 2025 Anderson Auto Care. All rights reserved.</p>
+   </footer>
+
+   <!-- JavaScript to handle confirm + redirect -->
+   <script src="Schedule.js" defer></script>
+</body>
+</html>
